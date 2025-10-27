@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travelly - Explore the World</title>
+  <link rel="stylesheet" href="third_p.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="logo">Travelly</div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="btn">Get Started</button>
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Главный экран -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Explore the world with us</h1>
+      <p>Find your next adventure with personalized travel recommendations</p>
+      <button class="btn learn-more">Book Now</button>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about hidden">
+    <div class="container">
+      <h2>About Travelly</h2>
+      <p>
+        Travelly is your personal guide to a world of unforgettable adventures.<br><br>
+        We help you discover stunning destinations — from golden tropical beaches to snowy mountain peaks.<br><br>
+        Plan your trips effortlessly, explore new cities and cultures, and collect memories that will last a lifetime.<br><br>
+        With Travelly, every journey becomes a story worth telling.
+      </p>
+    </div>
+  </section>
+
+  <!-- Популярные направления -->
+  <section id="destinations" class="destinations hidden">
+    <h2>Popular Destinations</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=4ef7145df3ac3c27d0d95fd5bf4f9441408f0815-4590915-images-thumbs&n=13" alt="Maldives">
+        <h3>Maldives</h3>
+      </div>
+      <div class="card">
+        <img src="https://avatars.mds.yandex.net/i?id=ff9201c026611bb9998dda055e17eafd9f95148c-5226853-images-thumbs&n=13" alt="Paris">
+        <h3>Paris</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Tokyo">
+        <h3>Tokyo</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакт -->
+  <section id="contact" class="contact hidden">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Have a question?" rows="4"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Travelly. All rights reserved.</p>
+  </footer>
+
+  <script src="third_p.js"></script>
+</body>
+</html>
