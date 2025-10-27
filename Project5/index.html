@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="five_p.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>📊 My Dashboard</h1>
+
+    <div class="controls">
+      <div class="date-filter">
+        <input type="date" id="start" class="arrow">
+        <input type="date" id="end" class="arrow">
+      </div>
+      <button id="theme-toggle">🌙</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="stats">
+      <div class="card">
+        <h3>Users</h3>
+        <p id="users-count" class="count">1,200</p>
+      </div>
+      <div class="card">
+        <h3>Sales</h3>
+        <p id="sales-count" class="count">$8,540</p>
+      </div>
+      <div class="card">
+        <h3>Active</h3>
+        <p id="active-count" class="count">312</p>
+      </div>
+    </section>
+
+    <section class="chart">
+      <canvas id="myChart"></canvas>
+    </section>
+  </main>
+
+  <script src="five_5.js"></script>
+</body>
+</html>
