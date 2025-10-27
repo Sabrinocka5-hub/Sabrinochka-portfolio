@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.6rem 3rem;
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0077ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0077ff;
+}
+
+/* ===== Burger Menu ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ===== Button ===== */
+.btn {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.btn:hover {
+  background: #005fd4;
+  transform: translateY(-2px);
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 100vh;
+  background: url('https://rare-gallery.com/uploads/posts/103381-maui-hawaii-beach-ocean-coast-mountain-sky-5k.jpeg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+}
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 6rem 2rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== About ===== */
+.about {
+  background: white;
+  text-align: center;
+}
+.about h2 {
+  color: #0077ff;
+  margin-bottom: 1rem;
+}
+
+/* ===== Destinations ===== */
+.destinations {
+  text-align: center;
+}
+.destinations h2 {
+  color: #0077ff;
+  margin-bottom: 2rem;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===== Contact ===== */
+.contact {
+  background: #0077ff;
+  color: white;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+.contact button {
+  background: white;
+  color: #0077ff;
+  font-weight: 600;
+}
+.contact button:hover {
+  background: #e6e6e6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  border-top: 1px solid #eee;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
