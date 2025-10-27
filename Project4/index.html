@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍽 Café Bliss</title>
+  <link rel="stylesheet" href="four_p.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🍽 Café Bliss</h1>
+    <div class="cart">🛒 Cart: <span id="cart-count">0</span></div>
+  </header>
+
+  <!-- 🔍 Поиск -->
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search menu..." />
+  </div>
+
+  <!-- Фильтры -->
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="drinks">Drinks</button>
+    <button data-filter="food">Food</button>
+    <button data-filter="dessert">Desserts</button>
+  </div>
+
+  <div class="menu-container" id="menu"></div>
+
+  <!-- Контейнер для всплывающих уведомлений -->
+  <div id="toast-container"></div>
+
+  <script src="four_p.js"></script>
+</body>
+</html>
