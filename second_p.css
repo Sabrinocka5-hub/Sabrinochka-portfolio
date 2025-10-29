@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease;
 }
 
 body {
@@ -15,28 +14,27 @@ body {
   align-items: center;
 }
 
-/* HEADER */
 .header {
   text-align: center;
   padding: 60px 20px 40px;
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  color: #f4f4f4;
-  letter-spacing: 2px;
+  font-size: 2.3rem;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
 .subtitle {
-  color: #8b3a3a;
+  color: #a1785d;
   font-weight: 400;
   margin-top: 10px;
+  font-size: 1rem;
 }
 
-/* PROJECT CARDS */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   width: 90%;
   max-width: 1100px;
@@ -49,41 +47,63 @@ body {
   padding: 30px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
   border: 1px solid transparent;
 }
 
 .card h2 {
   color: #f8f8f8;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
 .card p {
   color: #c7b8b1;
   font-size: 0.95rem;
+  min-height: 50px;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  border-color: #7b1e26;
-  box-shadow: 0 6px 25px rgba(123, 30, 38, 0.5);
+  transform: translateY(-5px);
+  border-color: #a25d36;
+  box-shadow: 0 6px 25px rgba(162, 93, 54, 0.5);
 }
 
-/* FOOTER */
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  background-color: #a25d36;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #c07045;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #a25d36;
+  color: #a25d36;
+}
+
+.btn.secondary:hover {
+  background-color: #a25d36;
+  color: #fff;
+}
+
 footer {
   text-align: center;
   padding: 30px 0;
-  color: #8b3a3a;
+  color: #a1785d;
   font-size: 0.9rem;
   letter-spacing: 1px;
-}
-
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-  .card {
-    padding: 20px;
-  }
 }
